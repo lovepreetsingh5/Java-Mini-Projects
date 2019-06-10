@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="400.0" minWidth="400.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="radios.checks.radiosChecksController">
+   <children>
+      <CheckBox fx:id="chkDosa" layoutX="118.0" layoutY="80.0" mnemonicParsing="false" onAction="#doChkDosa" text="Dosa 150" textFill="#ff0404">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="chkMan" layoutX="118.0" layoutY="130.0" mnemonicParsing="false" text="Manchurian 200" textFill="#ff0404">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="chkBur" layoutX="118.0" layoutY="173.0" mnemonicParsing="false" text="Burger 50" textFill="#ff0404">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="chkAll" layoutX="82.0" layoutY="44.0" mnemonicParsing="false" onAction="#doCheckAll" text="Select All" textFill="#ff0404">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </CheckBox>
+      <Button layoutX="111.0" layoutY="222.0" mnemonicParsing="false" onAction="#doBill" prefHeight="25.0" prefWidth="87.0" text="Bill" />
+      <RadioButton fx:id="dis10" layoutX="68.0" layoutY="278.0" mnemonicParsing="false" text="10%">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="discount" />
+         </toggleGroup>
+      </RadioButton>
+      <Separator layoutX="11.0" layoutY="262.0" prefHeight="8.0" prefWidth="383.0" />
+      <Label layoutX="144.0" layoutY="251.0" prefHeight="27.0" prefWidth="87.0" text="Discount" textFill="RED">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="dis20" layoutX="68.0" layoutY="313.0" mnemonicParsing="false" text="20%" toggleGroup="$discount">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </RadioButton>
+      <Button layoutX="182.0" layoutY="293.0" mnemonicParsing="false" onAction="#doNetBill" prefHeight="25.0" prefWidth="87.0" text="Net Bill" />
+      <Label fx:id="lblNet" layoutX="174.0" layoutY="332.0" prefHeight="17.0" prefWidth="138.0" text="00.00" textAlignment="CENTER">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotal" layoutX="215.0" layoutY="222.0" prefHeight="25.0" prefWidth="87.0" text="00.00">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
